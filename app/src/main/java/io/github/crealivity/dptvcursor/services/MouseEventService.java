@@ -134,7 +134,7 @@ public class MouseEventService extends AccessibilityService {
         super.onKeyEvent(event);
 
         // EMULATOR CLICK TEST: press 'ENTER' to force a mouse click
-        if (event.getAction() == KeyEvent.ACTION_UP && isOkKey(event.getKeyCode())) {
+        if (TreeLogger.DEBUG && event.getAction() == KeyEvent.ACTION_UP && isOkKey(event.getKeyCode())) {
             boolean ok = false;
             if(ModernInput.isAvailable()){
                 ok = (mEngine != null) && mEngine.forceModernClickAtPointer(

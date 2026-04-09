@@ -2,10 +2,23 @@
 ---
 
 
-[![Latest Release](https://img.shields.io/github/v/release/Crealivity/DPTV-Cursor?style=for-the-badge)](https://github.com/Crealivity/DPTV-Cursor/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/Crealivity/DPTV-Cursor/latest/total?style=for-the-badge)](https://github.com/Crealivity/DPTV-Cursor/releases/latest)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://www.buymeacoffee.com/Crealivity)
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white)](https://ko-fi.com/Crealivity)
+<p align="center">
+  <a href="https://crealivity.eu">
+    <img src="https://img.shields.io/badge/Crealivity-008080?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/>
+  </a>
+  <a href="https://github.com/Crealivity/DPTV-Cursor/releases/latest">
+    <img src="https://img.shields.io/github/v/release/Crealivity/DPTV-Cursor?style=for-the-badge" alt="Latest Release"/>
+  </a>
+  <a href="https://github.com/Crealivity/DPTV-Cursor/releases/latest">
+    <img src="https://img.shields.io/github/downloads/Crealivity/DPTV-Cursor/latest/total?style=for-the-badge" alt="Downloads"/>
+  </a>
+  <a href="https://www.buymeacoffee.com/Crealivity">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"/>
+  </a>
+  <a href="https://ko-fi.com/Crealivity">
+    <img src="https://img.shields.io/badge/Ko--fi-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white" alt="Ko-fi"/>
+  </a>
+</p>
 
 ---
 
@@ -109,6 +122,12 @@ Once done, the cursor should respond as soon as you use the D-pad/keys.
 
 That’s it. You’ll now be able to toggle and use the cursor with your remote.
 If you skip the overlay permission step and enable the service first, you might lock your remote controls until you plug in a physical mouse or use ADB, so follow the order carefully.
+
+#### ⚠️ **WARNING FOR FIRE TV/STICK USERS:**
+
+Some recent FireOS builds restrict accessibility services and may block DPTV Cursor from starting.
+Before setting up, please read this [issue](https://github.com/Crealivity/DPTV-Cursor/issues/1) for details, and try the suggested commands.
+If it still doesn’t work after trying them, it means your device isn’t compatible with accessibility-based cursor apps.
 
 #### RECOVERY (IF YOU SOFT-BRICK THE TV)
 

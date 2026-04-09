@@ -15,7 +15,7 @@ import java.util.List;
 public final class TreeLogger {
     private TreeLogger(){}
 
-    public static boolean DEBUG = true;
+    public static boolean DEBUG = false;
     private static final String TAG = "A11Y-TREE";
 
     public static void dumpAllWindows(AccessibilityService svc, int maxDepth) {
