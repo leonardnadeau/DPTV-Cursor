@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import io.github.crealivity.dptvcursor.R;
@@ -135,8 +136,23 @@ public class InstallationActivity extends AppCompatActivity {
             }
         }
         if (!Helper.isOverlayDisabled(this) && Helper.isAccessibilityDisabled(this)) {
-            openAccessibilitySettings();
+            showAccessibilityDisclosure();
         }
+    }
+
+    private void showAccessibilityDisclosure() {
+        if (!Helper.isAccessibilityDisabled(this)) {
+            return;
+        }
+
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle(R.string.acc_disclosure_title)
+                .setMessage(R.string.acc_disclosure_message)
+                .setNegativeButton(R.string.acc_disclosure_decline, (d, which) -> d.dismiss())
+                .setPositiveButton(R.string.acc_disclosure_continue, (d, which) -> openAccessibilitySettings())
+                .create();
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.show();
     }
 
     private void openAccessibilitySettings() {
@@ -160,7 +176,7 @@ public class InstallationActivity extends AppCompatActivity {
             if (Helper.isOverlayDisabled(this)) {
                 Helper.toast(this, "Overlay permissions denied", Toast.LENGTH_SHORT);
             } else {
-                openAccessibilitySettings();
+                showAccessibilityDisclosure();
             }
         } else if (requestCode == ACTION_ACCESSIBILITY_PERMISSION_REQUEST_CODE) {
             if (Helper.isAccessibilityDisabled(this)) {

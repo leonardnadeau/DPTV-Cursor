@@ -94,7 +94,30 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="12dp"
-            android:text="Accessibility permissions" />
+            android:text="@string/installation_review_accessibility_disclosure" />
+
+        <LinearLayout
+            android:id="@+id/card_accessibility_disclosure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/Text.DP.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/acc_disclosure_title" />
+
+            <TextView
+                style="@style/Text.DP.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/acc_disclosure_short" />
+        </LinearLayout>
 
         <!-- Quick guide/instructions -->
         <LinearLayout
@@ -117,7 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="• Accessibility permission is required so the cursor can move and click.\n\n• Overlay permission is required so the cursor can show on top of apps.\n\n• Both services must stay active — if one fails, the cursor won’t appear or respond." />
+                android:text="@string/installation_guide_summary" />
 
             <TextView
                 style="@style/Text.DP.Body"
