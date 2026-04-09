@@ -10,10 +10,10 @@ android {
 
     defaultConfig {
         applicationId "io.github.crealivity.dptvcursor"
-        minSdkVersion 19 // 21 // 24
+        minSdkVersion 21 // 21 // 24 // GOOGLE PLAY : MINIMUM SDK 21
         targetSdkVersion 36
-        versionCode 1000
-        versionName '1.0.0-alpha'
+        versionCode 1002
+        versionName '1.0.2-alpha'
         multiDexEnabled true
 
     }
