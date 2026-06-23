@@ -559,7 +559,7 @@ public class MouseEmulationEngine {
                     List<AccessibilityNodeInfo> nodeHierarchy = findNode(root, action, pInt);
 
                     for (int i = nodeHierarchy.size() - 1; i >= 0; i--) {
-                        if (clicked || focused) break;
+                        if (clicked || wasIME) break;
 
                         AccessibilityNodeInfo hitNode = nodeHierarchy.get(i);
                         if (hitNode == null) continue;
@@ -569,10 +569,10 @@ public class MouseEmulationEngine {
                         if (acts.contains(AccessibilityNodeInfo.AccessibilityAction.ACTION_ACCESSIBILITY_FOCUS)) {
                             focused = hitNode.performAction(AccessibilityNodeInfo.ACTION_ACCESSIBILITY_FOCUS);
                         }
-                        if (hitNode.isFocused() && acts.contains(AccessibilityNodeInfo.AccessibilityAction.ACTION_SELECT)) {
+                        if (hitNode.isClickable() && acts.contains(AccessibilityNodeInfo.AccessibilityAction.ACTION_SELECT)) {
                             hitNode.performAction(AccessibilityNodeInfo.ACTION_SELECT);
                         }
-                        if (hitNode.isFocused() && acts.contains(AccessibilityNodeInfo.AccessibilityAction.ACTION_CLICK)) {
+                        if (hitNode.isClickable() && acts.contains(AccessibilityNodeInfo.AccessibilityAction.ACTION_CLICK)) {
                             clicked = hitNode.performAction(AccessibilityNodeInfo.ACTION_CLICK);
                         }
 
